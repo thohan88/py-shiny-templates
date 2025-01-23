@@ -22,42 +22,21 @@ def mod_button_google_server(input, output, session, api_client, title="Google")
 
     @render.ui()
     async def google_login_link():
-        link = ui.tags.a(
-            ui.HTML(SVG_ICON),
-            title,
-            class_="btn btn-light btn-sm d-flex align-items-center justify-content-center gap-2",
-        )
-        if settings.google_client_id and settings.google_client_secret:
+        try:
             response = await api_client.get("/api/auth/google/authorize")
-            href = response.json().get("authorization_url")
-            link.attrs["href"] = href
-        else:
-            # Disable but keep link if env vars not set
-            link.add_class("disabled")
-            link.attrs["href"] = "#"
-            link = ui.popover(
-                ui.span(link, tabindex="0"),
-                ui.markdown(
-                    """
-                    To use Google, you need to provide the following
-                    variables in `.env`
-                    - `GOOGLE_CLIENT_ID`
-                    - `GOOGLE_CLIENT_SECRET`
+            response_data = response.json()
+            href = response_data.get("authorization_url")
+            if href:
+                return ui.tags.a(
+                    ui.HTML(SVG_ICON),
+                    title,
+                    href=href,
+                    class_="btn btn-light btn-sm d-flex align-items-center justify-content-center gap-2",
+                )
+        except Exception as e:
+            pass
 
-                    Rename the provided `.env.example` to `.env` and 
-                    provide the required variables. This requires you to
-                    setup a Google project with
-                    [OAuth2.0](https://support.google.com/cloud/answer/6158849?hl=en#zippy=). 
-                    Remember also to:
-                    - Enable People API in Console
-                    - Set your callback in Console: `/api/auth/google/callback`
-                    """
-                ),
-                title="Environment variables required",
-                placement="right"
-            )
-
-        return link
+    return None
 
 
 # Run module by running:
@@ -74,4 +53,3 @@ def mod_button_google_app():
 
     app = run_app(App(app_ui, server))
     return app
-
