@@ -1,0 +1,12 @@
+aiosqlite==0.20.0
+duckdb==1.1.3
+fastapi==0.115.6
+fastapi-users[sqlalchemy,oauth]==14.0.1
+ipyleaflet==0.19.2
+ipywidgets==7.7.5
+pandas==2.2.3
+plotly==5.24.1
+shiny[theme]==1.2.1
+shinywidgets==0.3.4
+shiny-validate==0.1.1
+pydantic-settings==2.7.1

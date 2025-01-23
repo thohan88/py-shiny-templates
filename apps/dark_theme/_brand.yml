@@ -1,0 +1,55 @@
+meta:
+  name: dark_theme
+
+color:
+  palette:
+    card_bg: "#F3F5F2"
+    valuebox_gradient_color: "#D4DBDE"
+    dark_theme_bg: "#14192D"
+    dark_theme_card_bg: "#0C0C0C" 
+    dark_theme_valuebox_gradient_color: "#262626"
+  
+logo: 
+  small: shiny.svg
+
+defaults:
+  bootstrap:
+    defaults:
+      enable-rounded: false
+      bslib-enable-shadows: false
+      bslib-spacer: 0.8rem
+      card-bg: $brand-card_bg
+
+  shiny:
+    theme:
+      preset: shiny
+      defaults:
+      rules: |
+        /* Cards */
+        .bslib-card { border: 0;}
+        [data-bs-theme=dark] .bslib-card { background-color: $brand-dark_theme_card_bg }
+        
+        /* Logo */
+        .navbar-logo { height: 34px; display: flex; }
+        .navbar-logo .sticker-base {fill: #000;}
+        .navbar-logo .sticker-text {fill: #fff;}
+        [data-bs-theme=dark] .navbar-logo .sticker-base {fill: #fff;}
+        [data-bs-theme=dark] .navbar-logo .sticker-text {fill: #000;}
+        
+        /* Leaflet */
+        [data-bs-theme="dark"] .leaflet-container,
+        [data-bs-theme="dark"] .leaflet-control-zoom-in,
+        [data-bs-theme="dark"] .leaflet-popup-pane,
+        [data-bs-theme="dark"] .leaflet-popup-content-wrapper,
+        [data-bs-theme="dark"] .leaflet-control-zoom-out,
+        [data-bs-theme="dark"] .leaflet-control-layers,
+        [data-bs-theme="dark"] .leaflet-control-attribution,
+        [data-bs-theme="dark"] .jupyter-widgets {
+          background-color: #1b1b1b !important;
+          border: none !important;
+          color: #bbb !important;
+        }
+
+        /* Plotly */
+        .bslib-value-box .plotly .modebar-container {display: none;}
+

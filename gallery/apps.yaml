@@ -1,0 +1,43 @@
+apps:
+  - title: "Dark theme"
+    image: "dark_theme.gif"
+    body: |
+      A Shiny app demonstrating dark theme compatibility with logos, value boxes, and maps.
+      Features a responsive dark/light mode toggle for seamless UI adaptation.
+    link: "dark_theme/"
+  - title: "FastAPI"
+    image: "fastapi.gif"
+    body: |
+      A minimal example showcasing the integration of FastAPI with Shiny.
+      Includes a FastAPI backend mounted at `/api` and a Shiny frontend for interactive communication.
+    link: "fastapi/"
+  - title: "FastAPIUsers"
+    image: "fastapi_users.gif"
+    body: |
+      A template for integrating FastAPIUsers with Shiny, providing user authentication and registration.
+      Supports email/password and Google OAuth2 login options.
+    link: "fastapi_users/"
+  - title: "Search input"
+    image: "input_search.gif"
+    body: |
+      A server-side selectize component which allows calling any back-end such as databases and API.
+      Fast search across large datasets with a low memory footprint for search and data validation.
+    link: "input_search/"
+  - title: "Leaflet live positions"
+    image: "leaflet_live_positions.gif"
+    body: |
+      A minimal example Shiny app displaying real-time positions on a leaflet map.
+      Shows the use of `panel_absolute` on top of map for adjust playback speed and refresh interval.
+    link: "leaflet_live_positions/"
+  - title: "Leaflet retina tiles"
+    image: "leaflet_retina_tiles.gif"
+    body: |
+      A Shiny app comparing retina and non-retina map tiles using ipyleaflet's SplitMapControl.
+      Highlights the visual differences between high and standard resolution tiles.
+    link: "leaflet_retina_tiles/"
+  - title: "Websockets"
+    image: "websockets.gif"
+    body: |
+      A real-time dashboard powered by websockets, retrieving live vehicle positions from the
+      Norwegian transportation company Entur updated every second.
+    link: "websockets/"

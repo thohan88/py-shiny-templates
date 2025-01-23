@@ -1,0 +1,58 @@
+[
+    {
+        "callsign": "SAS802",
+        "latitude": 59.77,
+        "longitude": 10.46,
+        "speed": 266,
+        "heading": 39
+    },
+    {
+        "callsign": "RYR94PC",
+        "latitude": 60.26,
+        "longitude": 10.75,
+        "speed": 451,
+        "heading": 36
+    },
+    {
+        "callsign": "TVS431P",
+        "latitude": 60.11,
+        "longitude": 11.07,
+        "speed": 141,
+        "heading": 16
+    },
+    {
+        "callsign": "SAS864",
+        "latitude": 60.23,
+        "longitude": 11.1,
+        "speed": 178,
+        "heading": 17
+    },
+    {
+        "callsign": "LOT4EB",
+        "latitude": 59.79,
+        "longitude": 11.15,
+        "speed": 304,
+        "heading": 338
+    },
+    {
+        "callsign": "DTR522",
+        "latitude": 60.44,
+        "longitude": 11.17,
+        "speed": 207,
+        "heading": 22
+    },
+    {
+        "callsign": "NSZ3221",
+        "latitude": 60.07,
+        "longitude": 11.37,
+        "speed": 308,
+        "heading": 168
+    },
+    {
+        "callsign": "SAS455",
+        "latitude": 59.86,
+        "longitude": 11.52,
+        "speed": 395,
+        "heading": 170
+    }
+]
